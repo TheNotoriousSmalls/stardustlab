@@ -1,1 +1,5 @@
-# stardustlab
+12/9
+
+- Repository setup
+- Boilerplate
+- Wireframes
