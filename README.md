@@ -2,4 +2,3 @@
 
 - Repository setup
 - Boilerplate
-- Wireframes
