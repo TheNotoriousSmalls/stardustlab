@@ -2,3 +2,7 @@
 
 - Repository setup
 - Boilerplate
+
+- Color changer function
+
+- Database
