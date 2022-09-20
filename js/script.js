@@ -26,23 +26,24 @@ function handleData(products) {
     products.forEach((product) => {
         //console.log(product);
 
-        // 1. Make a template
+        // 1. Grab template
+        const productTemplate = document.querySelector("#productTemplate").content;
 
-        // 2. Grab it
-        const template = document.querySelector("template").content;
-        // 3. Clone it
-        const clone = template.cloneNode(true);
-        // 4. Populate with data
-        clone.querySelector("div").textContent = product.productName;
-        clone.querySelector("div").textContent = product.productName;
-        clone.querySelector("div").textContent = product.productName;
-        clone.querySelector("div").textContent = product.productName;
-        clone.querySelector("div").textContent = product.productName;
+        // 2. Create a clone
+        const productClone = productTemplate.cloneNode(true);
 
+        // 3. Change content
+        productClone.querySelector("div").textContent = product.productName;
+        productClone.querySelector("div").textContent = product.productName;
+        productClone.querySelector("div").textContent = product.productName;
+        productClone.querySelector("div").textContent = product.productName;
+        productClone.querySelector("div").textContent = product.productName;
+
+        // 4. Select parent element
         const mainEl = document.querySelector("main");
-        mainEl.appendChild(clone);
-        // 5. Append it to DOM 
 
+        // 5. Append it to DOM 
+        mainEl.appendChild(clone);
 
     });
 }
