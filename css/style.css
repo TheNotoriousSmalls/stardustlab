@@ -1,0 +1,28 @@
+@supports (display: grid) {
+  main {
+    max-width: none;
+    margin: 0;
+  }
+
+  article {
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+article {
+  display: flex;
+  flex-flow: column;
+}
+
+article > img {
+  order: -1;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
