@@ -1,28 +1,256 @@
+@import url("https://use.typekit.net/dre4kpw.css");
+
+*/ *,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3rem;
+  background-color: white;
+  min-width: 200px;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #7a007a;
+  white-space: nowrap;
+}
+
+.nav-logo {
+  width: 10rem;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  background-color: white;
+  border-radius: 0;
+}
+
+.menu a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 150%;
+}
+
+.menu a:hover {
+  text-decoration: underline purple;
+}
+
+#filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 0;
+  color: black;
+  text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-size: 50%;
+  gap: 1rem;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 @supports (display: grid) {
   main {
     max-width: none;
-    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto-fit, minmax(300px, 1fr));
+    gap: 0.5rem;
+  }
+
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 0;
+    margin: 2rem;
   }
 
   article {
     margin: 0;
   }
-
-  main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
-  }
 }
 
 article {
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
+  min-width: 250px;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0;
+  box-shadow: 2px 2px 1px 0px #7a007a;
+  font-family: futura-pt, sans-serif;
 }
 
 article > img {
   order: -1;
   align-self: center;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+}
+
+article > h1 {
+  margin: 1rem 1rem 0;
+  padding: 0.5rem;
+  align-self: center;
+}
+
+article > h4 {
+  margin: 1rem 0.5rem 0.5rem;
+}
+
+article > p {
+  margin: 0.25em 0.5rem 0.5rem;
+  align-items: center;
+}
+
+.cost-container {
+  display: flex;
+}
+
+.product-price {
+  align-self: flex-start;
+  width: 5rem;
+  margin-bottom: auto;
+  margin: 1rem;
+  color: black;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.buy-button {
+  align-self: flex-end;
+  width: 5rem;
+  margin-bottom: auto;
+  margin: 1rem;
+  background: #7a007a;
+  color: white;
+  padding: 0.3rem;
+  border: 1px solid #7a007a;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid none;
+}
+
+.button-link:link {
+  text-decoration: none;
+}
+
+.buy-button:hover {
+  background-color: white;
+  color: #7a007a;
+  border: 1px solid #7a007a;
+}
+
+/* ol {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 0;
+  color: black;
+  text-align: center;
+  padding: 6px 6px;
+  text-decoration: none;
+  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-size: 80%;
+}
+
+ol a {
+  display: flex;
+  color: purple;
+  text-align: center;
+  padding: 7px 8px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-size: 120%;
+} */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+  border-top: 1px solid #7a007a;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 2px 0px solid #7a007a;
+    white-space: nowrap;
+  }
+
+  .nav-logo {
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    margin-right: 40px;
+  }
+
+  .menu a {
+    color: black;
+    text-decoration: none;
+    font-family: futura-pt, sans-serif;
+    font-size: 150%;
+  }
+
+  .menu a:hover {
+    text-decoration: underline purple;
+    color: black;
+  }
+
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 250px;
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0;
+    box-shadow: 2px 2px 1px #7a007a;
+    font-family: futura-pt, sans-serif;
+  }
 }

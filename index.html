@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=0.5"
+    />
 
     <meta name="robots" content="noindex, nofollow" />
 
@@ -11,19 +14,62 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
 
-  <header></header>
+  <header class="navbar">
+    <a href="#">
+      <img class="nav-logo" src="images/OldLogo.png" alt="Stardust Lab logo" />
+    </a>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#thelab">The Lab</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </header>
   <body>
+    <!-- <ol>
+      <li><a href="#">Shop ></a></li>
+      <li><a href="#">Products ></a></li>
+    </ol> -->
+
+    <div id="filters" style="background-color: aquamarine; padding: 10px"></div>
     <main>
-      <template id="productTemplate">
-        <article>
-          <header>
-            <h1>Product name</h1>
-          </header>
-          <div class="content">content</div>
-        </article>
-      </template>
+      <p id="loading-indicator">Loading products...</p>
     </main>
 
+    <footer>
+      <h4></h4>
+    </footer>
+
     <script src="/js/script.js"></script>
+
+    <template id="product-template">
+      <article class="product-card">
+        <h1 class="product-name"></h1>
+        <h4 class="product-type"></h4>
+        <p class="product-description"></p>
+        <p class="product-category"></p>
+        <p class="product-size"></p>
+        <div class="cost-container">
+          <div class="product-price"></div>
+          <a href="www.google.se" class="button-link"
+            ><div class="buy-button">BUY NOW</div>
+          </a>
+        </div>
+        <img src="#" alt="product image" class="product-image" />
+      </article>
+    </template>
+
+    <template id="filter-group-template">
+      <div class="filter-group">
+        <h3 class="filter-group-title"></h3>
+        <div class="filter-group-content"></div>
+      </div>
+    </template>
+    <template id="filter-item-template">
+      <div class="filter-item">
+        <span class="filter-item-checkbox"></span>
+        <span class="filter-item-label"></span>
+      </div>
+    </template>
   </body>
 </html>
